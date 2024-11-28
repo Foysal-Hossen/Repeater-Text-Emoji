@@ -1,120 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:layout_margin="5dp"
+    android:layout_margin="10dp"
     tools:context=".MainActivity">
 
-    <LinearLayout
+    <androidx.drawerlayout.widget.DrawerLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:weightSum="2"
+        android:layout_height="match_parent"
         >
 
-        <EditText
-            android:id="@+id/fastNameId"
-            android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:hint="First Name"
-            android:textSize="25sp"
-            android:paddingLeft="15dp"
-            android:layout_marginBottom="10dp"
-            />
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
 
-        <EditText
-            android:id="@+id/lastNameId"
-            android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:hint="Last Name"
-            android:textSize="25sp"
-            android:paddingLeft="15dp"
-            android:layout_marginBottom="10dp"
-            />
+            <com.google.android.material.appbar.AppBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
 
-    </LinearLayout>
+                <com.google.android.material.appbar.MaterialToolbar
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    />
 
-    <EditText
-        android:id="@+id/emailId"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Email"
-        android:textSize="25sp"
-        android:paddingLeft="15dp"
-        android:layout_marginBottom="10dp"
-        />
+            </com.google.android.material.appbar.AppBarLayout>
 
-    <EditText
-        android:id="@+id/numberId"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Number"
-        android:textSize="25sp"
-        android:paddingLeft="15dp"
-        android:layout_marginBottom="10dp"
-        />
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="?attr/actionBarSize"
+                />
 
-    <EditText
-        android:id="@+id/nidNumberId"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Nid Number"
-        android:textSize="25sp"
-        android:paddingLeft="15dp"
-        android:layout_marginBottom="10dp"
-        />
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
-    <EditText
-        android:id="@+id/passportNumberId"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Passport Number"
-        android:textSize="25sp"
-        android:paddingLeft="15dp"
-        android:layout_marginBottom="10dp"
-        />
-
-    <EditText
-        android:id="@+id/studentNumberId"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Student Id"
-        android:textSize="25sp"
-        android:paddingLeft="15dp"
-        android:layout_marginBottom="10dp"
-        />
-
-    <Button
-        android:id="@+id/singUpId"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Sing Up"
-        android:textSize="25sp"
-        android:layout_marginBottom="10dp"
-        />
-
-    <Button
-        android:id="@+id/showAll"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Show"
-        android:textSize="30sp"
-        />
-
-
-    <TextView
-        android:id="@+id/tvDisplay"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="25sp"
-        />
+    </androidx.drawerlayout.widget.DrawerLayout>
 
 
 
 
-</LinearLayout>
+
+</RelativeLayout>
